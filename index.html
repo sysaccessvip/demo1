@@ -3,178 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AgenciaWeb — Creación de Sitios Profesionales</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <meta name="description" content="AgenciaWeb — Diseño y desarrollo profesional de sitios web, tiendas online, PWA y más.">
-  <link rel="icon" href="assets/img/favicon.png">
+  <title>WELCOME</title>
+  <meta name="description" content="Página simple — WELCOME">
+  <style>
+    :root{
+      --bg-1: #0f1724;
+      --bg-2: #2563eb;
+      --card: #ffffff;
+      --muted: #94a3b8;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--bg-1) 0%, #0b1220 40%, var(--bg-2) 100%);
+      color:var(--card);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      padding:1rem;
+    }
+    .card{
+      width:100%;
+      max-width:920px;
+      background:rgba(255,255,255,0.04);
+      border-radius:14px;
+      padding:3rem;
+      text-align:center;
+      box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    h1{
+      font-size: clamp(2rem, 6vw, 4rem);
+      margin:0 0 .4rem;
+      letter-spacing: .06em;
+      font-weight:700;
+    }
+    p.lead{
+      margin:0 0 1.25rem;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    .actions{
+      display:flex;
+      gap:.6rem;
+      justify-content:center;
+      margin-top:1rem;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:.6rem 1rem;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      border:0;
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,#60a5fa,#7c3aed);
+      color:#fff;
+    }
+    .btn-ghost{
+      background:transparent;
+      color:var(--card);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    footer{
+      margin-top:1.25rem;
+      color:rgba(255,255,255,0.6);
+      font-size:.85rem;
+    }
+
+    /* pequeña animación */
+    .pulse {
+      display:inline-block;
+      transform-origin:center;
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%{transform:scale(1); opacity:1}
+      50%{transform:scale(1.02); opacity:.95}
+      100%{transform:scale(1); opacity:1}
+    }
+
+    @media (max-width:520px){
+      .card{padding:2rem}
+      .actions{flex-direction:column}
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="https://sysaccessvip.com/">Agencia<span>Web</span></a>
-      <nav class="nav">
-        <a href="#services">Servicios</a>
-        <a href="#portfolio">Portafolio</a>
-        <a href="#pricing">Precios</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+  <main class="card" role="main">
+    <h1 class="pulse">WELCOME</h1>
+    <p class="lead">Sitio simple listo para usar. Sube este archivo como <code>code</code> </p>
+
+    <div class="actions" role="navigation" aria-label="Acciones">
+      <a class="btn btn-primary" href="#" onclick="alert('Demo: bienvenido 👋')">Comenzar</a>
+      <a class="btn btn-ghost" href="login.html">Ir a login</a>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Diseñamos sitios web profesionales que venden</h1>
-          <p class="lead">Landing pages, tiendas online, PWA, mantenimiento y SEO. Tu presencia digital lista en tiempo récord.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#contact">Solicitar presupuesto</a>
-            <a class="btn btn-outline" href="#services">Ver servicios</a>
-          </div>
-        </div>
-        <div class="hero-illustration">
-          <img src="assets/img/hero-illustration.svg" alt="Diseño web profesional">
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title">Nuestros servicios</h2>
-        <div class="cards-grid">
-          <article class="card">
-            <h3>Web Corporativa</h3>
-            <p>Diseños limpios y responsivos, optimizados para conversión y velocidad.</p>
-          </article>
-          <article class="card">
-            <h3>Tienda Online (e-commerce)</h3>
-            <p>Integración con pasarelas de pago, inventario, y UX de compra optimizada.</p>
-          </article>
-          <article class="card">
-            <h3>PWA & Apps Web</h3>
-            <p>Progressive Web Apps para una experiencia nativa en móviles y escritorio.</p>
-          </article>
-          <article class="card">
-            <h3>Mantenimiento & SEO</h3>
-            <p>Actualizaciones, backups, optimización SEO on-page y monitoreo.</p>
-          </article>
-          <article class="card">
-            <h3>Branding & UI/UX</h3>
-            <p>Identidad visual, prototipado y pruebas de usuario.</p>
-          </article>
-          <article class="card">
-            <h3>Integraciones & API</h3>
-            <p>Automatizaciones, integraciones con CRMs y servicios externos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Portafolio</h2>
-        <div class="portfolio-grid">
-          <figure class="portfolio-item">
-            <img src="assets/img/portfolio-1.jpg" alt="Proyecto 1">
-            <figcaption>Landing + comercio para startup</figcaption>
-          </figure>
-          <figure class="portfolio-item">
-            <img src="assets/img/portfolio-2.jpg" alt="Proyecto 2">
-            <figcaption>Tienda online — Moda</figcaption>
-          </figure>
-          <figure class="portfolio-item">
-            <img src="assets/img/portfolio-3.jpg" alt="Proyecto 3">
-            <figcaption>PWA para servicios</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2 class="section-title">Planes</h2>
-        <div class="pricing-grid">
-          <div class="price-card">
-            <h3>Starter</h3>
-            <p class="price">US$ 399</p>
-            <ul>
-              <li>5 páginas</li>
-              <li>Responsive</li>
-              <li>SEO básico</li>
-            </ul>
-            <a class="btn" href="#contact">Contratar</a>
-          </div>
-          <div class="price-card featured">
-            <h3>Business</h3>
-            <p class="price">US$ 899</p>
-            <ul>
-              <li>Tienda básica</li>
-              <li>Integración pagos</li>
-              <li>PWA (opcional)</li>
-            </ul>
-            <a class="btn" href="#contact">Contratar</a>
-          </div>
-          <div class="price-card">
-            <h3>Premium</h3>
-            <p class="price">US$ 1699</p>
-            <ul>
-              <li>Diseño a medida</li>
-              <li>Marketing & SEO</li>
-              <li>Soporte 6 meses</li>
-            </ul>
-            <a class="btn" href="#contact">Contratar</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt">
-      <div class="container contact-grid">
-        <div>
-          <h2 class="section-title">Contacto</h2>
-          <p>Cuéntanos tu proyecto y te enviamos una propuesta.</p>
-          <address class="contact-info">
-            <p><strong>Email:</strong> hola@agenciaweb.example</p>
-            <p><strong>Teléfono:</strong> +51 9XX XXX XXX</p>
-          </address>
-          <p>O envíanos un mensaje rápido:</p>
-        </div>
-        <form id="contactForm" class="contact-form">
-          <label>
-            Nombre
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Mensaje
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <div class="form-actions">
-            <button class="btn" type="submit">Enviar</button>
-            <button class="btn btn-ghost" type="reset">Limpiar</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> AgenciaWeb — Todos los derechos reservados.</p>
-        <nav class="footer-nav">
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos</a>
-        </nav>
-      </div>
+    <footer>
+      © <span id="year"></span> — sysaccessvip
     </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    window.addEventListener('load', () => {
+      const btn = document.querySelector('.btn-primary');
+      if (btn) btn.focus({preventScroll:true});
+    });
+  </script>
 </body>
 </html>
-
-
