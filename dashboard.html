@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — AgenciaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Agencia<span>Web</span></a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="dashboard.html">Dashboard</a>
+        <button class="btn btn-ghost" id="logoutBtn">Cerrar sesión</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Panel de control</h1>
+      <p id="welcomeText">Bienvenido</p>
+
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Solicitudes recibidas</h3>
+          <p id="leadsCount">0</p>
+        </div>
+        <div class="card">
+          <h3>Proyectos activos</h3>
+          <p id="activeProjects">0</p>
+        </div>
+        <div class="card">
+          <h3>Últimas acciones</h3>
+          <ul id="recentActions">
+            <li>No hay actividad aún.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Protección simple: si no hay token, redirige al login
+    (function(){
+      const token = localStorage.getItem('agenciaweb_token');
+      if (!token) {
+        window.location.href = 'login.html';
+        return;
+      }
+      const user = localStorage.getItem('agenciaweb_user') || 'Usuario';
+      document.getElementById('welcomeText').textContent = 'Hola, ' + user + ' — Bienvenido al dashboard';
+      // Datos ficticios de demo
+      document.getElementById('leadsCount').textContent = '4';
+      document.getElementById('activeProjects').textContent = '2';
+    })();
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('agenciaweb_token');
+      localStorage.removeItem('agenciaweb_user');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

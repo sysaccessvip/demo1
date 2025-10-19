@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgenciaWeb — Creación de Sitios Profesionales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="AgenciaWeb — Diseño y desarrollo profesional de sitios web, tiendas online, PWA y más.">
+  <link rel="icon" href="assets/img/favicon.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Agencia<span>Web</span></a>
+      <nav class="nav">
+        <a href="#services">Servicios</a>
+        <a href="#portfolio">Portafolio</a>
+        <a href="#pricing">Precios</a>
+        <a href="#contact">Contacto</a>
+        <a class="btn btn-ghost" href="login.html">Acceder</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Diseñamos sitios web profesionales que venden</h1>
+          <p class="lead">Landing pages, tiendas online, PWA, mantenimiento y SEO. Tu presencia digital lista en tiempo récord.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact">Solicitar presupuesto</a>
+            <a class="btn btn-outline" href="#services">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <img src="assets/img/hero-illustration.svg" alt="Diseño web profesional">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Nuestros servicios</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Web Corporativa</h3>
+            <p>Diseños limpios y responsivos, optimizados para conversión y velocidad.</p>
+          </article>
+          <article class="card">
+            <h3>Tienda Online (e-commerce)</h3>
+            <p>Integración con pasarelas de pago, inventario, y UX de compra optimizada.</p>
+          </article>
+          <article class="card">
+            <h3>PWA & Apps Web</h3>
+            <p>Progressive Web Apps para una experiencia nativa en móviles y escritorio.</p>
+          </article>
+          <article class="card">
+            <h3>Mantenimiento & SEO</h3>
+            <p>Actualizaciones, backups, optimización SEO on-page y monitoreo.</p>
+          </article>
+          <article class="card">
+            <h3>Branding & UI/UX</h3>
+            <p>Identidad visual, prototipado y pruebas de usuario.</p>
+          </article>
+          <article class="card">
+            <h3>Integraciones & API</h3>
+            <p>Automatizaciones, integraciones con CRMs y servicios externos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Portafolio</h2>
+        <div class="portfolio-grid">
+          <figure class="portfolio-item">
+            <img src="assets/img/portfolio-1.jpg" alt="Proyecto 1">
+            <figcaption>Landing + comercio para startup</figcaption>
+          </figure>
+          <figure class="portfolio-item">
+            <img src="assets/img/portfolio-2.jpg" alt="Proyecto 2">
+            <figcaption>Tienda online — Moda</figcaption>
+          </figure>
+          <figure class="portfolio-item">
+            <img src="assets/img/portfolio-3.jpg" alt="Proyecto 3">
+            <figcaption>PWA para servicios</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Planes</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Starter</h3>
+            <p class="price">US$ 399</p>
+            <ul>
+              <li>5 páginas</li>
+              <li>Responsive</li>
+              <li>SEO básico</li>
+            </ul>
+            <a class="btn" href="#contact">Contratar</a>
+          </div>
+          <div class="price-card featured">
+            <h3>Business</h3>
+            <p class="price">US$ 899</p>
+            <ul>
+              <li>Tienda básica</li>
+              <li>Integración pagos</li>
+              <li>PWA (opcional)</li>
+            </ul>
+            <a class="btn" href="#contact">Contratar</a>
+          </div>
+          <div class="price-card">
+            <h3>Premium</h3>
+            <p class="price">US$ 1699</p>
+            <ul>
+              <li>Diseño a medida</li>
+              <li>Marketing & SEO</li>
+              <li>Soporte 6 meses</li>
+            </ul>
+            <a class="btn" href="#contact">Contratar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Contacto</h2>
+          <p>Cuéntanos tu proyecto y te enviamos una propuesta.</p>
+          <address class="contact-info">
+            <p><strong>Email:</strong> hola@agenciaweb.example</p>
+            <p><strong>Teléfono:</strong> +51 9XX XXX XXX</p>
+          </address>
+          <p>O envíanos un mensaje rápido:</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <label>
+            Nombre
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Mensaje
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn btn-ghost" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> AgenciaWeb — Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

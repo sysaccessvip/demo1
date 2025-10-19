@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acceso — AgenciaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <section class="auth-card">
+      <a href="index.html" class="brand auth-brand">Agencia<span>Web</span></a>
+      <h2>Acceder</h2>
+      <form id="loginForm" class="auth-form">
+        <label>
+          Usuario
+          <input id="loginUser" type="text" autocomplete="username" required>
+        </label>
+        <label>
+          Contraseña
+          <input id="loginPass" type="password" autocomplete="current-password" required>
+        </label>
+        <div class="auth-actions">
+          <button class="btn" type="submit">Entrar</button>
+          <a class="btn btn-ghost" id="toRegister" href="#">Crear cuenta</a>
+        </div>
+        <p class="auth-note">Cuenta demo: <strong>admin / password123</strong></p>
+      </form>
+      <form id="registerForm" class="auth-form hidden">
+        <h3>Registrar nueva cuenta</h3>
+        <label>
+          Usuario
+          <input id="regUser" type="text" required>
+        </label>
+        <label>
+          Contraseña
+          <input id="regPass" type="password" required>
+        </label>
+        <div class="auth-actions">
+          <button class="btn" id="doRegister" type="button">Registrar</button>
+          <button class="btn btn-ghost" id="toLogin" type="button">Volver</button>
+        </div>
+      </form>
+      <div id="authMsg" class="auth-msg" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
